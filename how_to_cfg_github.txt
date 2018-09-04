@@ -1,0 +1,33 @@
+how to config git on linux:
+https://www.cnblogs.com/miss-radish/p/4731563.html
+
+一、准备工作
+1.有一个github账号，没有的话请到到github.com注册
+
+2.已经安装了git
+
+通过下面的命令检查是否已经安装了git
+
+$ git --version   ###检查是否安装了git，如果没有安装就执行下一条命令
+$ sudo apt-get install git    ###安装git的命令
+二、搭建github环境
+1.命令生成ssh key公钥
+ $ ssh-keygen -t rsa -C "jhzhou.jeff@gmail.com"
+2.登录github，输SSH keys面板入ssh key公钥
+ isa.pub 文件完整拷贝出来
+3.测试ssh key 是否成功
+ $ ssh -T git@github.com
+4.git配置
+ $ git config --global user.name "jhzhoujeff"
+ $ git config --global user.email "jhzhou.jeff@gmail.com"
+
+三、从github的repository clone项目到本地和上传本地项目到github
+1.从github上面clone 项目到本地
+ git clone https://github.com/jhzhoujeff/hello-world.git
+
+2 可以开始修改文件了
+  git add file_name....
+  git commit
+  git push -u origin master
+
+
